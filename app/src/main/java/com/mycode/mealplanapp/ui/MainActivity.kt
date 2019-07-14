@@ -17,20 +17,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
-    companion object{
-        var hello=0
-        var onChangeCounter = 0
-    }
-    hey
-    sdokfmds
-    helllooo
-    sflsdfm
-    sec
-    hey
-    private lateinit var adapter: RecyclerViewAdapter
-    private var composite : CompositeDisposable = CompositeDisposable()
-    var providerFactory : ViewModelProviderFactory? = null
-        @Inject set
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
