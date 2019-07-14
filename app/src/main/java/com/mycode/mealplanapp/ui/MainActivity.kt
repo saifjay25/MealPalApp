@@ -21,6 +21,7 @@ class MainActivity : DaggerAppCompatActivity(){
         var hello=0
         var onChangeCounter = 0
     }
+    helllooo
     sflsdfm
     private lateinit var adapter: RecyclerViewAdapter
     private var composite : CompositeDisposable = CompositeDisposable()
