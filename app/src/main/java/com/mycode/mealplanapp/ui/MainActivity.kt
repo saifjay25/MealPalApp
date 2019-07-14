@@ -18,6 +18,7 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
     companion object{
+        var hello=0
         var onChangeCounter = 0
     }
     sflsdfm
