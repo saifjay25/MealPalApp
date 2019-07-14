@@ -17,48 +17,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
-    var hello 
-    var key
-    sdvd
+    
     override fun onCreate(savedInstanceState: Bundle?) {
-        setContentView(R.layout.activity_main)
-        recycleView.layoutManager = LinearLayoutManager(this)
-        recycleView.setHasFixedSize(true)
-        val viewModel = ViewModelProviders.of(this, providerFactory).get(MainViewModel::class.java)
-        viewModel.restaurantAPICall().observe(this, object: Observer<FeatureCollections>{
-            override fun onChanged(t: FeatureCollections?) {
-                if (t != null) {
-                    adapter = RecyclerViewAdapter(this@MainActivity, t.getFeatures())
-                    recycleView.adapter = adapter
-                }
-            }
-
-        })
-        override fun onCre(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        recycleView.layoutManager = LinearLayoutManager(this)
-        val viewModel = ViewModelProviders.of(this, providerFactory).get(MainViewModel::class.java)
-        viewModel.restaurantAPICall().observe(this, object: Observer<FeatureCollections>{
-            override fun onChanged(t: FeatureCollections?) {
-                if (t != null) {
-                    adapter = RecyclerViewAdapter(this@MainActivity, t.getFeatures())
-                    recycleView.adapter = adapter
-                }
-            }
-
-        })
-        floating.setOnClickListener {
-            composite.add(viewModel.deleteMeal().subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe())
-            floatingButtonPressed =true
-            onChangeCounter =0
-            Toast.makeText(applicationContext, "Meal reservation deleted", Toast.LENGTH_SHORT).show()
-        }
+       
     }
-    dfkdo
-    var z
-    var p   
-    var y
 }
