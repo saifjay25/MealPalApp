@@ -19,6 +19,7 @@ import javax.inject.Inject
 class MainActivity : DaggerAppCompatActivity(){
     var hello 
     var key
+    sdvd
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_main)
         recycleView.layoutManager = LinearLayoutManager(this)
