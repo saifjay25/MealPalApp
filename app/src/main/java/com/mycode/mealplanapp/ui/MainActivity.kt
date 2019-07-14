@@ -24,6 +24,7 @@ class MainActivity : DaggerAppCompatActivity(){
     sdokfmds
     helllooo
     sflsdfm
+    sec
     private lateinit var adapter: RecyclerViewAdapter
     private var composite : CompositeDisposable = CompositeDisposable()
     var providerFactory : ViewModelProviderFactory? = null
