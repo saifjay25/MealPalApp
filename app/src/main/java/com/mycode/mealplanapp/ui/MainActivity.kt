@@ -18,9 +18,9 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
     companion object{
-        var floatingButtonPressed =false
         var onChangeCounter = 0
     }
+    sflsdfm
     private lateinit var adapter: RecyclerViewAdapter
     private var composite : CompositeDisposable = CompositeDisposable()
     var providerFactory : ViewModelProviderFactory? = null
