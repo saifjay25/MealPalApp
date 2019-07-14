@@ -20,6 +20,7 @@ class MainActivity : DaggerAppCompatActivity(){
     companion object{
         var onChangeCounter = 0
     }
+    dsofsd
     private lateinit var adapter: RecyclerViewAdapter
     private var composite : CompositeDisposable = CompositeDisposable()
     var providerFactory : ViewModelProviderFactory? = null
