@@ -17,8 +17,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
-    var hello
-    var yyy
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_main)
         recycleView.layoutManager = LinearLayoutManager(this)
@@ -33,11 +31,10 @@ class MainActivity : DaggerAppCompatActivity(){
             }
 
         })
-         override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCre(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recycleView.layoutManager = LinearLayoutManager(this)
-        recycleView.setHasFixedSize(true)
         val viewModel = ViewModelProviders.of(this, providerFactory).get(MainViewModel::class.java)
         viewModel.restaurantAPICall().observe(this, object: Observer<FeatureCollections>{
             override fun onChanged(t: FeatureCollections?) {
