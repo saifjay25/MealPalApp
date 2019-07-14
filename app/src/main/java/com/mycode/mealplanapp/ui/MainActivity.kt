@@ -18,6 +18,20 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
+        setContentView(R.layout.activity_main)
+        recycleView.layoutManager = LinearLayoutManager(this)
+        recycleView.setHasFixedSize(true)
+        val viewModel = ViewModelProviders.of(this, providerFactory).get(MainViewModel::class.java)
+        viewModel.restaurantAPICall().observe(this, object: Observer<FeatureCollections>{
+            override fun onChanged(t: FeatureCollections?) {
+                if (t != null) {
+                    adapter = RecyclerViewAdapter(this@MainActivity, t.getFeatures())
+                    recycleView.adapter = adapter
+                }
+            }
+
+        })
+         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recycleView.layoutManager = LinearLayoutManager(this)
