@@ -21,6 +21,7 @@ class MainActivity : DaggerAppCompatActivity(){
         var hello=0
         var onChangeCounter = 0
     }
+    sdokfmds
     helllooo
     sflsdfm
     private lateinit var adapter: RecyclerViewAdapter
