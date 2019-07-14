@@ -57,6 +57,6 @@ class MainActivity : DaggerAppCompatActivity(){
         }
     }
     var z
-    var p
-
+    var p   
+    var y
 }
