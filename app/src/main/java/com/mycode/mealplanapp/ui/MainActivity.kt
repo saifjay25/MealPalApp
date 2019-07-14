@@ -17,8 +17,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(){
-    var h
-    var keet
+    var hello 
+    var key
+    digjr
+    vkkco
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_main)
         recycleView.layoutManager = LinearLayoutManager(this)
